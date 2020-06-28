@@ -4,7 +4,7 @@
     "demo_url": "https://andreev.work/app/tum-rechner",
     "github_url": "https://github.com/andreemic/tumcalc",
     "description": "Hilft Studieninteressenten ihre Punkte fürs Eignungsfeststellungsverfahren  an der Technischen Universität München auszurechnen.",
-    "technologies": ["Angular", "TypeScript", "Sass", "Travis CI"],
+    "technologies": ["Angular", "TypeScript", "Sass", "Bootstrap", "Travis CI"],
     "client": null,
     "small_preview": "tum-rechner-preview.png",
     "dates": "Jun. 2020"
