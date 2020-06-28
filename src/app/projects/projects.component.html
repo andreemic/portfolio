@@ -5,13 +5,15 @@
   <mat-card [class.mat-elevation-z2]="true" *ngFor="let project of projects" fxFlex="0 0 calc(33%-25px)" 
     fxFlex.sm="0 0 calc(50%-25px)" fxFlex.xs="0 0 auto" 
     ngClass.xs="mat-card-mobile" fxLayout="column">
-    <mat-card-title>{{project.title}}</mat-card-title>
+    <mat-card-title>{{ project.title }}</mat-card-title>
+    <mat-card-subtitle>{{ project.dates }}</mat-card-subtitle>
       <img mat-card-image *ngIf="project.small_preview" [src]="'assets/img/previews/' + project.small_preview" [alt]="project.title + ' screenshot.'">
     <mat-card-content fxFlex="1 1 auto">
-      <p *ngIf="project.description">{{project.description}}</p>
-      <p ngClass="made-with">Gemacht mit: {{project.technologies.join(', ')}}</p>
+      <p *ngIf="project.description">{{ project.description }}</p>
+      <p ngClass="made-with">Gemacht mit: {{ project.technologies.join(', ') }}</p>
     </mat-card-content>
     <mat-card-actions fxFlexAlign="flex-end">
+      <button *ngIf="project.github_url" mat-button target="_blank" [href]="project.github_url">GitHub</button>
       <a *ngIf="project.demo_url" mat-button target="_blank" [href]="project.demo_url">Demo</a>
     </mat-card-actions>
   </mat-card>

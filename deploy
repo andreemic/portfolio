@@ -1,0 +1,4 @@
+#!/bin/bash
+
+rsync -v --delete-after -avz dist/my-app/ andreev_work@94.130.211.59:apps/public/portfolio
+

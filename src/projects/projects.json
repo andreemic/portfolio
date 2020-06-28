@@ -2,10 +2,12 @@
   {
     "title": "TUM Punkte Rechner",
     "demo_url": "https://andreev.work/app/tum-rechner",
+    "github_url": "https://github.com/andreemic/tumcalc",
     "description": "Hilft Studieninteressenten ihre Punkte fürs Eignungsfeststellungsverfahren  an der Technischen Universität München auszurechnen.",
     "technologies": ["Angular", "TypeScript", "Sass", "Travis CI"],
     "client": null,
-    "small_preview": "tum-rechner-preview.png"
+    "small_preview": "tum-rechner-preview.png",
+    "dates": "Jun. 2020"
   },
   {
     "title": "Youtube Metronome",
@@ -13,7 +15,8 @@
     "description": "Metronom für Musikvideos auf Youtube.",
     "technologies": ["HTML", "CSS", "JS"],
     "client": null,
-    "small_preview": "ytmetro-preview.png"
+    "small_preview": "ytmetro-preview.png",
+    "dates": "Mai 2020"
   },
   {
     "title": "Portfolio",
@@ -22,25 +25,19 @@
     "technologies": ["Angular", "TypeScript", "SCSS", "NodeJS", "Express", "WebGL", "GLSL"],
     "client": null,
     "client_url": null,
-    "small_preview": "portfolio-preview.png"
+    "small_preview": "portfolio-preview.png",
+    "dates": "Apr. 2020"
   }, 
   {
     "title": "Blocks & Docs",
     "demo_url": "http://andreev.work/app/blocks-docs",
+    "github_url": "https://github.com/andreemic/blocks-docs",
     "description": "Prototyp eines fällschungssicheres Dokumentenspeichers mithilfe einer Blockchain.",
     "technologies": ["NodeJS", "Express"],
     "client": null,
     "client_url": null,
-    "small_preview": "blocks-preview.png"
-  }, 
-  {
-    "title": "veg&tables Bestellseite",
-    "demo_url": "http://vegandtables.herokuapp.com/",
-    "client": "veg&tables Catering",
-    "client_url": "vegandtables.de",
-    "description": "Entwurf, Wireframing und Entwicklung einer Menü und Bestellseite.",
-    "technologies": ["React", "Node.js", "MySQL", "Express"],
-    "small_preview": "vegandtables-preview.png"
+    "small_preview": "blocks-preview.png",
+    "dates": "Nov. 2019"
   }, 
   {
     "title": "Konsens Jugendhilfe",
@@ -49,6 +46,17 @@
     "technologies": ["HTML", "CSS", "JS"],
     "client": "Konsens - Interkulturelle Jugendhilfe",
     "client_url": "http://konsens-ijh.de",
-    "small_preview": "konsens-preview.png"
-  }
+    "small_preview": "konsens-preview.png",
+    "dates": "Jun. 2019"
+  },
+  {
+    "title": "veg&tables Bestellseite",
+    "demo_url": "http://vegandtables.herokuapp.com/",
+    "client": "veg&tables Catering",
+    "client_url": "vegandtables.de",
+    "description": "Entwurf, Wireframing und Entwicklung einer Menü und Bestellseite.",
+    "technologies": ["React", "Node.js", "MySQL", "Express"],
+    "small_preview": "vegandtables-preview.png",
+    "dates": "Sep. - Dez. 2018"
+  } 
 ]
