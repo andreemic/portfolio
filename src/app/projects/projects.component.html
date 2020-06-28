@@ -9,7 +9,7 @@
       <mat-card-title>{{ project.title }}</mat-card-title>
       <mat-card-subtitle>{{ project.dates }}</mat-card-subtitle>
       <a *ngIf="project.github_url" class="git-link" target="_blank" 
-        [href]="project.github_url" [alt]="'GitHub for ' + project.title"></a>
+        [href]="project.github_url"></a>
     </mat-card-header>
       <img mat-card-image *ngIf="project.small_preview" [src]="'assets/img/previews/' + project.small_preview" [alt]="project.title + ' screenshot.'">
     <mat-card-content fxFlex="1 1 auto">
