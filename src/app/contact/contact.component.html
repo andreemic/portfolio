@@ -1,0 +1,43 @@
+<div fxFlex="1 1 100%" fxFlex.gt-sm="700px" fxFlex.sm="500px" fxLayout="column" fxLayout.gt-xs="column-reverse" fxLayoutAlign="start center" fxLayoutAlign.gt-xs="end center" class="contact-con">
+  <div ngClass="form-con" fxFlexAlign="stretch">
+    <h1>Schreib mir!</h1>
+    <form class="contact-form" >
+          
+      <mat-form-field class="example-full-width">
+        <mat-label>Email</mat-label>
+        <input matInput [formControl]="emailFormControl" name="email" (keyup)="formInput()">
+        
+        <mat-error *ngIf="emailFormControl.hasError('email')">
+          Echte Email oder keine Email!
+        </mat-error>
+      </mat-form-field>
+
+      <mat-form-field>
+        <mat-label>Name</mat-label>
+        <input matInput name="name" [(ngModel)]="name" (keyup)="formInput()">
+      </mat-form-field>
+
+      <mat-form-field class="msg">
+        <mat-label>Nachricht*</mat-label>
+        <textarea matInput [formControl]="msgFormControl" name="message" (keyup)="formInput()"></textarea> 
+      </mat-form-field>
+      
+      <div class="form-action-con">
+        <button *ngIf="!isEmpty()" mat-button (click)="clearForm()">Leeren</button>
+        <button mat-raised-button color="primary" [ngClass]="{'success': sent, 'error': error}" [disabled]="msgFormControl.hasError('required') || emailFormControl.hasError('email') || error" (click)="sendForm()">{{this.sent ? (this.error ? 'Try later' : '') : 'Senden'}}</button>
+      </div>
+    </form>   
+
+  </div>
+
+  <div class="contact-way-con" fxFlex.xs="1 1 auto" fxLayout="column" fxLayout.gt-xs="row" fxLayoutAlign="center" >
+    <a href="mailto:mikhail@andreev.work" class="contact-way">
+      <img src="assets/img/email.png" alt="Email">
+      <a>mikhail@andreev.work</a>
+    </a>
+    <a  href="https://t.me/andreemic" class="contact-way">
+      <img src="assets/img/telegram.png" alt="Telegram">
+      <a>@andreemic</a>
+    </a>
+  </div>
+</div>

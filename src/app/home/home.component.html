@@ -1,0 +1,22 @@
+<app-home-animation fxHide fxShow.lt-md></app-home-animation>
+
+<div class="content">
+  <div fxLayout.gt-sm="row" fxLayoutAlign.gt-sm="center center" ngClass="landing" fxLayout.lt-md="column" fxLayoutAlign.lt-md="space-around center" ngClass.lt-md="landing mobile-landing">
+      <div class="main-content"> 
+        <img src="assets/img/avatar-placeholder.png"/>
+        <h1 ngClass="name">Mikhail Andreev</h1>
+        <p ngClass="title">Full-Stack Developer</p>
+        <p ngClass="location">Düsseldorf, Germany</p>
+      </div>
+      <p fxShow fxHide.lt-md>
+      Seit 2016 entwickele ich Webseiten und interne Web-Apps für Privatpersonen und Kleinunternehmen. <br>
+      Unser Leben ist hart genug. Deswegen, versuche ich mit jedem Projekt es jemandem zu erleichtern oder einem anderen dabei behilflich zu sein. Schau dir meine <a href='' routerLink="/projects">Projekte</a> an um zu sehen wie genau ich es mache. <br>
+        Außerhalb davon spiele ich gerne mit Arduinos, Gitarren und Lötkolben. 
+        Wenn du an Zusammenarbeit interessiert bist, kannst du mich <a href='' routerLink="/contact">hier</a> kontaktieren. 
+      </p>
+      <div class="buttons" fxHide fxShow.lt-md> 
+        <button mat-button routerLink="/contact">Contact</button>
+        <a href="" mat-raised-button routerLink="/projects">Projects</a>
+      </div>
+  </div>
+</div>

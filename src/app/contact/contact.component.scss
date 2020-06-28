@@ -1,0 +1,89 @@
+@import '../variables.scss';
+:host {
+  flex: 1 1 auto;
+  display: flex;
+  justify-content: center;
+  height: 100%;
+}
+.contact-con {
+  margin-top: 50px;
+}
+.contact-way-con {
+  .contact-way {
+    position: relative;
+    height: 96px;
+    margin: 10px 0px;
+    width: 260px;
+    cursor: pointer;
+
+    &:hover {
+      img {
+        opacity: 0.15;
+      }
+    }
+    
+    * {
+      position:absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%,-50%);
+    }
+    img {
+      opacity: 0.1;
+      transition: 0.2s;
+      z-index: 1;
+    }
+    a {
+      z-index: 2;
+      color: $link;
+      text-decoration: none;
+      font-size: 24px;
+    }
+  }
+}
+
+
+.form-con {
+  padding: 0px 10px;  
+  h1 {
+    margin: 10px 0px 0px 0px;
+  }
+  .contact-form {
+    display: block;
+  
+    .mat-form-field {
+      display: block;
+    }
+    .mat-error {
+      text-align: right;
+    }
+    .form-action-con {
+      float: right;
+
+      button {
+        margin: 0px 10px;
+
+        &.mat-raised-button {
+          background-color: $accent;
+
+          &:disabled {
+            background-color: initial;
+          }
+          &.success {
+            height: 48px;
+            background-color: initial;
+            background: url("../../assets/img/check.png");
+            background-repeat: no-repeat;
+            background-position: center center;
+            box-shadow: none;
+          }
+          &.error {
+            color: #d83030;
+            background: none;
+            box-shadow: none;
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,49 @@
+@import '../variables.scss';
+
+:host {
+  flex: 1 1 auto;
+  display: flex;
+  justify-content: center;
+}
+.projects-con{
+  padding: 10px;
+  max-width: 1140px;
+
+  .mat-card {
+    min-height: 400px;
+    margin-bottom: 15px;
+    
+    .mat-card-image {
+      width: 100%;
+      align-self: center;
+    }
+    &.mat-card-mobile {
+      width: 95%;
+      height: auto;
+      padding: 12px;
+
+      .mat-card-image {
+        min-height: 200px;
+        width: calc(100% + 24px);
+        margin: 0 -12px 12px -12px;
+      }
+      .mat-card-content {
+        margin-bottom: 8px;
+      }
+      .mat-card-actions {
+        margin-right: 0px;
+      }
+    }
+    * { 
+      font-family: 'Roboto', sans-serif;    }
+    .made-with { 
+      margin-top: 24px;
+    }
+    .mat-card-actions {
+      a {
+        color: $link;
+        float: right;
+      }
+    }
+  }
+}

@@ -1,0 +1,54 @@
+[
+  {
+    "title": "TUM Punkte Rechner",
+    "demo_url": "https://andreev.work/app/tum-rechner",
+    "description": "Hilft Studieninteressenten ihre Punkte fürs Eignungsfeststellungsverfahren  an der Technischen Universität München auszurechnen.",
+    "technologies": ["Angular", "TypeScript", "Sass", "Travis CI"],
+    "client": null,
+    "small_preview": "tum-rechner-preview.png"
+  },
+  {
+    "title": "Youtube Metronome",
+    "demo_url": "https://chrome.google.com/webstore/detail/youtube-metronome/fdkbpgmenembjcifameimdbakhkciidg",
+    "description": "Metronom für Musikvideos auf Youtube.",
+    "technologies": ["HTML", "CSS", "JS"],
+    "client": null,
+    "small_preview": "ytmetro-preview.png"
+  },
+  {
+    "title": "Portfolio",
+    "demo_url": "http://andreev.work",
+    "description": "Angular Single-Page Portfolio App.",
+    "technologies": ["Angular", "TypeScript", "SCSS", "NodeJS", "Express", "WebGL", "GLSL"],
+    "client": null,
+    "client_url": null,
+    "small_preview": "portfolio-preview.png"
+  }, 
+  {
+    "title": "Blocks & Docs",
+    "demo_url": "http://andreev.work/app/blocks-docs",
+    "description": "Prototyp eines fällschungssicheres Dokumentenspeichers mithilfe einer Blockchain.",
+    "technologies": ["NodeJS", "Express"],
+    "client": null,
+    "client_url": null,
+    "small_preview": "blocks-preview.png"
+  }, 
+  {
+    "title": "veg&tables Bestellseite",
+    "demo_url": "http://vegandtables.herokuapp.com/",
+    "client": "veg&tables Catering",
+    "client_url": "vegandtables.de",
+    "description": "Entwurf, Wireframing und Entwicklung einer Menü und Bestellseite.",
+    "technologies": ["React", "Node.js", "MySQL", "Express"],
+    "small_preview": "vegandtables-preview.png"
+  }, 
+  {
+    "title": "Konsens Jugendhilfe",
+    "demo_url": "http://konsens-ijh.de",
+    "description": "Entwurf und Entwicklung einer Homepage.",
+    "technologies": ["HTML", "CSS", "JS"],
+    "client": "Konsens - Interkulturelle Jugendhilfe",
+    "client_url": "http://konsens-ijh.de",
+    "small_preview": "konsens-preview.png"
+  }
+]
