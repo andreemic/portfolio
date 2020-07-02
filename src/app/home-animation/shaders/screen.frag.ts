@@ -1,4 +1,4 @@
-export default `precision mediump float;
+export default `precision highp float;
 
 uniform sampler2D u_screen;
 uniform float u_opacity;
