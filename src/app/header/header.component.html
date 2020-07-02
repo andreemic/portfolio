@@ -1,19 +1,19 @@
 <nav class="large-nav" fxHide fxShow.gt-sm="true">
     <ul>
         <li>
-          <span routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">Home</span>
+          <span routerLink="/" routerLinkActive="active-link" [routerLinkActiveOptions]="{ exact: true }">Home</span>
         </li>
         <li>
-          <span routerLink="/projects" routerLinkActive="active">Projekte</span>
+          <span routerLink="/projects" routerLinkActive="active-link">Projekte</span>
         </li>
         <li>
-          <span routerLink="/contact" routerLinkActive="active">Kontakt</span>
+          <span routerLink="/contact" routerLinkActive="active-link">Kontakt</span>
         </li>
     </ul>
 </nav>
 
 <nav class="small-nav" fxShow [fxHide.lt-md]="this.url === '/'" fxHide.gt-sm="true">
-  <button [ngClass]="menuOpen ? 'is-active' : ''" class="hamburger hamburger--slider no-select" type="button" (click)="menuToggle()">
+  <button [ngClass]="menuOpen ? 'is-active-link' : ''" class="hamburger hamburger--slider no-select" type="button" (click)="menuToggle()">
     <span class="hamburger-box">
       <span class="hamburger-inner"></span>
     </span>
@@ -22,13 +22,16 @@
   <ul [@openClose]="menuOpen ? 'open' : 'closed'"
     (@openClose.done)="animationEnd()">
     <li [ngClass]="showItems ? '' : 'hidden'" (click)="menuToggle()">
-      <span routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">Home</span>
+      <span routerLink="/" routerLinkActive="active-link" [routerLinkActiveOptions]="{ exact: true }">Home</span>
     </li>
     <li [ngClass]="showItems ? '' : 'hidden'" (click)="menuToggle()">
-      <span routerLink="/projects" routerLinkActive="active">Projekte</span>
+      <span routerLink="/projects" routerLinkActive="active-link">Projekte</span>
     </li>
     <li [ngClass]="showItems ? '' : 'hidden'" (click)="menuToggle()">
-      <span routerLink="/contact" routerLinkActive="active">Kontakt</span>
+      <span routerLink="/contact" routerLinkActive="active-link">Kontakt</span>
+    </li>
+    <li class="impressum-mobile-link" [ngClass]="showItems ? '' : 'hidden'" (click)="menuToggle()">
+      <span routerLink="/impressum" routerLinkActive="active-link">Impressum/Datenschutz</span>
     </li>
   </ul>
 </nav>

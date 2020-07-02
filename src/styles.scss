@@ -128,5 +128,27 @@ table {
 	border-spacing: 0;
 }
 
+app-root {
+  height: 100%;
+  display: block;
+}
+app-footer {
+  position: absolute;
+  bottom: 0;
+  flex: 0 0 auto;
+  align-self: center;
+  width: 100%;
+  text-align: center;
+  padding: 10px;
+  background: white;
+  box-sizing: border-box;
+  z-index: 31;
+  height: 40px;
+}
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+
+.active-link {
+  color: $accent !important;
+}

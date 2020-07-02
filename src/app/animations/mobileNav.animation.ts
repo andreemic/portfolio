@@ -14,11 +14,15 @@ export const mobileNavAnimations = [trigger('openClose', [
     style({display: 'block'}),
     group([
       animate('300ms cubic-bezier(0.33, 1, 0.68, 1)', style({opacity:1})),
-      query('li', [
+      query('li:not(.impressum-mobile-link)', [
         style({opacity: 0, transform:'translateX(100px)'}),
         stagger(100, [
           animate('500ms cubic-bezier(0.33, 1, 0.68, 1)', style({ opacity: 1, transform: 'none'}))
         ])
+      ]),
+      query('li.impressum-mobile-link', [
+        style({opacity: 0}),
+        animate('500ms', style({opacity: 1}))
       ])
     ])
   ]),

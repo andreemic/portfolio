@@ -21,6 +21,7 @@ import { MatCardModule } from '@angular/material/card';
 import { MatDividerModule } from '@angular/material/divider';
 import { MatInputModule } from '@angular/material/input';
 import { HomeAnimationComponent } from './home-animation/home-animation.component';
+import { ImpressumComponent } from './impressum/impressum.component';
 
 
 @NgModule({
@@ -31,7 +32,8 @@ import { HomeAnimationComponent } from './home-animation/home-animation.componen
     FooterComponent,
     HeaderComponent,
     ContactComponent,
-    HomeAnimationComponent
+    HomeAnimationComponent,
+    ImpressumComponent
   ],
   imports: [
     FlexLayoutModule,

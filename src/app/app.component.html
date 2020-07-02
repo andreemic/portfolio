@@ -1,7 +1,9 @@
-<div fxLayout='column' [ngStyle]="{height:'100%'}">
+<div fxLayout='column' [ngStyle]="{'min-height':'100%', position: 'relative'}">
   <app-header fxFlex="0 0 auto"></app-header>
    
-  <main [@fadeAnimation]="getRouterOutletState(o)" [ngClass.lt-md]="{'top-nav-padding': this.url !== '/'}" >
+  <main [@fadeAnimation]="getRouterOutletState(o)" 
+    class="bottom-nav-padding"
+    [ngClass.lt-md]="{'top-nav-padding': this.url !== '/'}" >
     <router-outlet #o="outlet"></router-outlet>
   </main>
   <app-footer fxShow [fxHide.lt-md]="this.url === '/'" fxFlexAlign="center" fxFlex="0 0 auto"></app-footer>
