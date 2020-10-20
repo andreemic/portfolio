@@ -1,5 +1,5 @@
 #!/bin/bash
 
-ng build --prod
+ng build --source-map=false --prod
 rsync -v --delete-after -avz dist/my-app/ andreev_work@94.130.211.59:apps/public/portfolio
 

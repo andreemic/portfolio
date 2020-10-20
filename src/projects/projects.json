@@ -10,6 +10,16 @@
     "dates": "Jun. 2020"
   },
   {
+    "title": "moqq",
+    "demo_url": "https://www.npmjs.com/package/moqq",
+    "github_url": "https://github.com/andreemic/moqq",
+    "description": "Node.js Package für simple Device Mockups mit einem CLI. Wurde für die Mockups auf dieser Seite benutzt.",
+    "technologies": ["Node.js"],
+    "client": null,
+    "small_preview": "moqq-preview.png",
+    "dates": "Jun. 2020"
+  },
+  {
     "title": "Youtube Metronome",
     "demo_url": "https://chrome.google.com/webstore/detail/youtube-metronome/fdkbpgmenembjcifameimdbakhkciidg",
     "description": "Metronom für Musikvideos auf Youtube.",
@@ -20,7 +30,8 @@
   },
   {
     "title": "Portfolio",
-    "demo_url": "http://andreev.work",
+    "demo_url": "https://andreev.work",
+    "github_url": "https://github.com/andreemic/portfolio",
     "description": "Angular Single-Page Portfolio App.",
     "technologies": ["Angular", "TypeScript", "SCSS", "NodeJS", "Express", "WebGL", "GLSL"],
     "client": null,
