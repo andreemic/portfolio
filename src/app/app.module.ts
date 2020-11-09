@@ -13,16 +13,29 @@ import { ProjectsComponent } from './projects/projects.component';
 import { FooterComponent } from './footer/footer.component';
 import { HeaderComponent } from './header/header.component';
 import { ContactComponent } from './contact/contact.component';
-
+import { HTTP_INTERCEPTORS } from '@angular/common/http';
+import { TokenInterceptor } from './token.interceptor';
+import { HttpClientModule } from '@angular/common/http';
 
 import { MatIconModule } from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material/button';
 import { MatCardModule } from '@angular/material/card';
 import { MatDividerModule } from '@angular/material/divider';
 import { MatInputModule } from '@angular/material/input';
+import { MatSnackBarModule } from '@angular/material/snack-bar';
+import { MatCheckboxModule } from '@angular/material/checkbox';
+import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
+
 import { HomeAnimationComponent } from './home-animation/home-animation.component';
 import { ImpressumComponent } from './impressum/impressum.component';
-
+import { AdminComponent } from './admin/admin.component';
+import { LoginFormComponent } from './admin/login-form.component';
+import { PostPreviewComponent } from './post-preview/post-preview.component';
+import { PostEditComponent } from './post-edit/post-edit.component';
+import { AdminOverviewComponent } from './admin-overview/admin-overview.component';
+import { QuillModule } from 'ngx-quill';
+import { BlogOverviewComponent } from './blog-overview/blog-overview.component';
+import { PostViewComponent } from './post-view/post-view.component';
 
 @NgModule({
   declarations: [
@@ -33,11 +46,19 @@ import { ImpressumComponent } from './impressum/impressum.component';
     HeaderComponent,
     ContactComponent,
     HomeAnimationComponent,
-    ImpressumComponent
+    ImpressumComponent,
+    AdminComponent,
+    LoginFormComponent,
+    PostPreviewComponent,
+    PostEditComponent,
+    AdminOverviewComponent,
+    BlogOverviewComponent,
+    PostViewComponent,
   ],
   imports: [
     FlexLayoutModule,
     FormsModule,
+    HttpClientModule,
     ReactiveFormsModule,
     BrowserModule,
     BrowserAnimationsModule,
@@ -47,9 +68,19 @@ import { ImpressumComponent } from './impressum/impressum.component';
     MatButtonModule,
     MatCardModule,
     MatDividerModule,
-    MatInputModule
+    MatInputModule,
+    MatSnackBarModule,
+    MatProgressSpinnerModule,
+    MatCheckboxModule,
+    QuillModule.forRoot(),
   ],
-  providers: [],
-  bootstrap: [AppComponent]
+  providers: [
+    {
+      provide: HTTP_INTERCEPTORS,
+      useClass: TokenInterceptor,
+      multi: true,
+    },
+  ],
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

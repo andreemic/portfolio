@@ -7,6 +7,9 @@
           <span routerLink="/projects" routerLinkActive="active-link">Projekte</span>
         </li>
         <li>
+          <span routerLink="/blog" routerLinkActive="active-link">Blog</span>
+        </li>
+        <li>
           <span routerLink="/contact" routerLinkActive="active-link">Kontakt</span>
         </li>
     </ul>
@@ -26,6 +29,9 @@
     </li>
     <li [ngClass]="showItems ? '' : 'hidden'" (click)="menuToggle()">
       <span routerLink="/projects" routerLinkActive="active-link">Projekte</span>
+    </li>
+    <li [ngClass]="showItems ? '' : 'hidden'" (click)="menuToggle()">
+      <span routerLink="/blog" routerLinkActive="active-link">Blog</span>
     </li>
     <li [ngClass]="showItems ? '' : 'hidden'" (click)="menuToggle()">
       <span routerLink="/contact" routerLinkActive="active-link">Kontakt</span>

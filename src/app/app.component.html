@@ -1,5 +1,7 @@
 <div fxLayout='column' [ngStyle]="{'min-height':'100%', position: 'relative'}">
+  <ng-template [ngIf]="this.url.indexOf('/admin') == -1">
   <app-header fxFlex="0 0 auto"></app-header>
+</ng-template>
    
   <main [@fadeAnimation]="getRouterOutletState(o)" 
     class="bottom-nav-padding"

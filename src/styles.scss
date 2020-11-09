@@ -3,10 +3,16 @@
 @import './app/layout.scss';
 @import '../node_modules/hamburgers/_sass/hamburgers/hamburgers.scss';
 
+@import "../node_modules/quill-mention/dist/quill.mention.min.css";
+
 * {
     font-family: 'Ubuntu', sans-serif;
 }
 
+
+.mat-snack-bar-container a {
+  color: #0088ff !important;
+}
 @media only screen and (max-width: 959px) {
   .no-scroll {
    overflow: hidden; 
@@ -86,10 +92,7 @@ button,
 /** Zero **/
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
+a, 
 dl, dt, dd, ol, ul, li,
 fieldset, form, label, legend,
 table, caption, tbody, tfoot, thead, tr, th, td,

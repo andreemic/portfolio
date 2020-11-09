@@ -7,16 +7,17 @@ import { fadeAnimation } from './animations/fade.animation';
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss'],
-  animations: [fadeAnimation]
+  animations: [fadeAnimation],
 })
 export class AppComponent {
   url: string;
-  
+
   constructor(private router: Router, private renderer: Renderer2) {
-    router.events.subscribe((e:any) => {
+    router.events.subscribe((e: any) => {
       if (e instanceof NavigationEnd) {
         this.url = e.urlAfterRedirects || e.url;
-        
+        console.log(this.url);
+
         this.updateBodyScroll(renderer, this.url);
       }
     });
@@ -39,4 +40,3 @@ export class AppComponent {
 
   title = "Mikhail's Portfolio";
 }
-
