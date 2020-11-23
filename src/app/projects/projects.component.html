@@ -1,14 +1,14 @@
-<div  fxLayout="row wrap" fxLayout.xs="column" 
-  fxLayoutAlign=" flex-start" fxLayoutAlign.sm="space-around" fxLayoutAlign.xs="flex-start center" 
-  fxLayoutGap="25px" fxLayoutGap.sm="0px" 
+<div fxLayout="row wrap" fxLayout.xs="column"
+  fxLayoutAlign=" flex-start" fxLayoutAlign.sm="space-around" fxLayoutAlign.xs="flex-start center"
+  fxLayoutGap="25px" fxLayoutGap.sm="0px"
   ngClass="projects-con">
-  <mat-card [class.mat-elevation-z2]="true" *ngFor="let project of projects" fxFlex="0 0 calc(33%-25px)" 
-    fxFlex.sm="0 0 calc(50%-25px)" fxFlex.xs="0 0 auto" 
+  <mat-card class="project-mat-card" [class.mat-elevation-z2]="true" *ngFor="let project of projects" fxFlex="0 0 calc(33%-25px)"
+    fxFlex.sm="0 0 calc(50%-25px)" fxFlex.xs="0 0 auto"
     ngClass.xs="mat-card-mobile" fxLayout="column">
-    <mat-card-header class="project-header"> 
+    <mat-card-header class="project-header">
       <mat-card-title>{{ project.title }}</mat-card-title>
       <mat-card-subtitle>{{ project.dates }}</mat-card-subtitle>
-      <a *ngIf="project.github_url" class="git-link" target="_blank" 
+      <a *ngIf="project.github_url" class="git-link" target="_blank"
         [href]="project.github_url"></a>
     </mat-card-header>
       <img mat-card-image *ngIf="project.small_preview" [src]="'assets/img/previews/' + project.small_preview" [alt]="project.title + ' screenshot.'">

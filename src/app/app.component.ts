@@ -16,7 +16,6 @@ export class AppComponent {
     router.events.subscribe((e: any) => {
       if (e instanceof NavigationEnd) {
         this.url = e.urlAfterRedirects || e.url;
-        console.log(this.url);
 
         this.updateBodyScroll(renderer, this.url);
       }
@@ -35,8 +34,9 @@ export class AppComponent {
   }
 
   public getRouterOutletState(outlet) {
-    return outlet.isActivated ? outlet.activatedRoute.url.value.join('/') : '';
+    let s =  outlet.isActivated ? outlet.activatedRoute.url.value.join('/') : '';
+    return s;
   }
 
-  title = "Mikhail's Portfolio";
+  title = 'Mikhail\'s Portfolio';
 }

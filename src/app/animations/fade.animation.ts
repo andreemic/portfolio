@@ -4,8 +4,8 @@ export const fadeAnimation =
   trigger('fadeAnimation', [
 
   // route 'enter and leave (<=>)' transition
-    transition('* => projects', [
-      query('mat-card', [
+    transition('* => projects, * => blog', [
+      query('.project-mat-card', [
         style({opacity: 0}),
         stagger(300, [
           animate('500ms', style({opacity: 1}))

@@ -5,18 +5,22 @@
 
 @import "../node_modules/quill-mention/dist/quill.mention.min.css";
 
-* {
-    font-family: 'Ubuntu', sans-serif;
-}
-
-
 .mat-snack-bar-container a {
   color: #0088ff !important;
 }
 @media only screen and (max-width: 959px) {
   .no-scroll {
-   overflow: hidden; 
+   overflow: hidden;
   }
+}
+
+.mat-card-disable {
+  padding: inherit !important;
+  box-shadow: none !important;
+  border-radius: 0px !important;
+  transition: none !important;
+  display: initial!important;
+  position: static !important;
 }
 
 nav * {
@@ -39,7 +43,7 @@ nav * {
 }
 .lock-scroll {
   overflow: hidden;
-} 
+}
 
 /* Normalize */
 /**
@@ -92,12 +96,12 @@ button,
 /** Zero **/
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, 
+a,
 dl, dt, dd, ol, ul, li,
 fieldset, form, label, legend,
 table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed, 
-figure, figcaption, footer, header, hgroup, 
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
 menu, nav, output, ruby, section, summary,
 time, mark, audio, video {
 	margin: 0;
@@ -108,7 +112,7 @@ time, mark, audio, video {
 	vertical-align: baseline;
 }
 /* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure, 
+article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
 	display: block;
 }

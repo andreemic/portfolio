@@ -19,7 +19,6 @@ export class ProjectsComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
-    console.log(this.projects);
   }
 
 }
