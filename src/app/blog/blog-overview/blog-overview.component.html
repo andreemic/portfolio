@@ -1,0 +1,5 @@
+<div fxLayout="column" fxLayoutAlign="flex-start center">
+  <app-post-preview *ngFor="let post of posts; index as i; trackBy: api.getPostId; let last = last;" [post]="post" [adminView]="false" [renderSeparator]="!last">
+  </app-post-preview>
+  <div class="no-posts" *ngIf="!posts?.length" >Noch keine posts.</div>
+</div>

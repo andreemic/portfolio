@@ -1,0 +1,36 @@
+<div class='post-edit-con'>
+
+  <div fxLayout="row" style="margin-bottom: 20px">
+    <div (click)="thumbnailInput.click()" class="thumbnail-upload-con mat-elevation-z2" matRipple>
+      <input #thumbnailInput [hidden]="true" type="file" (change)="onImageChanged($event)"
+             accept="image/png, image/jpeg">
+      <span *ngIf="!thumbnailUrl">Choose Thumbnail (16:9, jpg/png)</span>
+      <img src={{thumbnailUrl}} *ngIf="thumbnailUrl"/>
+    </div>
+    <div fxLayout="column">
+      <mat-form-field fxFlex="0 1 auto" class="title-form-field">
+        <mat-label>Title</mat-label>
+        <input matInput type="text" [(ngModel)]="post.title"/>
+      </mat-form-field>
+
+      <mat-form-field fxFlex="1 1 auto" class="description-form-field">
+        <mat-label>Description</mat-label>
+        <textarea matInput [(ngModel)]="post.description"></textarea>
+      </mat-form-field>
+      <mat-checkbox fxLayout="column" fxLayoutAlign="center" [(ngModel)]="post.hidden">Hidden</mat-checkbox>
+    </div>
+  </div>
+
+  <quill-editor [(ngModel)]="post.body"
+            [modules]="quillConfig" [preserveWhitespace]="true"
+  ></quill-editor>
+
+  <div class='post-edit-actions-con'>
+    <button *ngIf="isNewPost else showSaveBtn" mat-raised-button (click)="savePost()">Add Post</button>
+    <ng-template #showSaveBtn>
+      <a [routerLink]="['/blog/post', post.pid]" href="" mat-button>Go to post</a>
+      <button mat-button color="warn" (click)="deletePost()">Delete</button>
+      <button mat-raised-button color="primary" (click)="savePost()">Save</button>
+    </ng-template>
+  </div>
+</div>

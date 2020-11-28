@@ -1,0 +1,27 @@
+<div class="post-preview-con" ngClass.xs="mobile">
+  <mat-card ngClass.gt-xs="mat-card-disable">
+    <div class='post-preview' [class.userView]="!adminView" (click)="openPost()" >
+        <div class='thumb-con'>
+          <img *ngIf="post.thumbnailPath" [src]="post.thumbnailPath.small" />
+          <span class='read-prompt'>Read</span>
+        </div>
+        <div class="content">
+          <div class="text">
+            <h2 class="title"><span class="number">#{{ post.pid }}</span>{{ post.title }}</h2>
+            <p>{{ post.description }}</p>
+            <span class="date">{{ post.dateCreated.format('MMM Do YY')}}</span>
+          </div>
+
+        <div class='actions' *ngIf="adminView">
+          <a [routerLink]="['post', post.pid]"><button mat-button>Edit</button></a>
+        </div>
+        <div class='actions' *ngIf="!adminView" fxHide  fxShow.xs>
+          <a [routerLink]="['/blog/post', post.pid]"><button mat-button>Read</button></a>
+        </div>
+        </div>
+
+    </div>
+  </mat-card>
+  <span *ngIf="renderSeparator" class='post-preview-sep'></span>
+
+</div>

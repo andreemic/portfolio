@@ -1,0 +1,9 @@
+<mat-spinner *ngIf="!post; else content"></mat-spinner>
+<ng-template #content>
+  <div class='a-con'>
+    <h1>{{ post.title }}</h1>
+
+    <img class="post-header" *ngIf="post.thumbnailPath" [src]="post.thumbnailPath.big" />
+    <quill-view-html [content]="post.body" format="text" theme="snow"></quill-view-html>
+  </div>
+</ng-template>

@@ -1,0 +1,14 @@
+<div *ngIf="!user; else loggedIn">
+  <app-my-login-form [error]="loginError" (submitEM)="login($event)">Your Form</app-my-login-form>
+</div>
+
+<ng-template #loggedIn>
+  <div (click)="logOut()" fxLayout='column' fxLayoutAlign='center center' class='logged-in-as'>
+    <mat-icon aria-hidden="false" aria-label="Username">account_circle</mat-icon>{{user?.username}}
+  </div>
+  <div class="outlet-con">
+    <router-outlet></router-outlet>
+  </div>
+<ng-template>
+
+
