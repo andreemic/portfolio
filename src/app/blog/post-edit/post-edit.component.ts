@@ -39,6 +39,9 @@ export class PostEditComponent implements OnInit {
       this.snackBarRef.dismiss();
     }
   }
+  quillModules = {
+    syntax: true,
+  };
 
   constructor(
     private router: Router,
@@ -46,10 +49,6 @@ export class PostEditComponent implements OnInit {
     private route: ActivatedRoute,
     private _snackBar: MatSnackBar
   ) {}
-  quillConfig = {
-    //To-Do: autoLink to other articles with quill-mention
-    syntax: true,
-  };
   snackBarRef: MatSnackBarRef<SnackBarCustomComponent>;
   openSnackBar(html: string) {
     this.snackBarRef = this._snackBar.openFromComponent(
