@@ -27,6 +27,51 @@ pre.ql-syntax {
     font-family: 'Ubuntu Mono', monospace !important;
 }
 
+/* Dirty fix until font-size of ascii art is dynamically adjusted by quill module */
+@media only screen and (max-width: 440px) {
+  span.ql-font-monospace {
+    font-size: 5px;
+  }
+}
+@media only screen and (min-width: 440px) and (max-width: 510px) {
+  span.ql-font-monospace {
+    font-size: 6px;
+  }
+}
+@media only screen and (min-width: 510px) and (max-width: 578px) {
+  span.ql-font-monospace {
+    font-size: 7px;
+  }
+}
+@media only screen and (min-width: 578px) and (max-width: 625px) {
+  span.ql-font-monospace {
+    font-size: 8px;
+  }
+}
+@media only screen and (min-width: 625px) and (max-width: 684px) {
+  span.ql-font-monospace {
+    font-size: 9px;
+  }
+}
+@media only screen and (min-width: 684px) and (max-width: 684px) {
+  span.ql-font-monospace {
+    font-size: 10px;
+  }
+}
+@media only screen and (min-width: 759px) and (max-width: 843px) {
+  span.ql-font-monospace {
+    font-size: 10px;
+  }
+}
+@media only screen and (min-width: 843px)  {
+  span.ql-font-monospace {
+    font-size: 10px;
+  }
+}
+
+
+
+
 nav * {
   text-decoration: none;
   list-style: none;
