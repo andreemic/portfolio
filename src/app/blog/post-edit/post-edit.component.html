@@ -22,7 +22,8 @@
   </div>
 
   <quill-editor [(ngModel)]="post.body"
-            [modules]="quillConfig" [preserveWhitespace]="true"
+                                      [modules]="quillModules" [preserveWhitespace]="true" [customModules]="quillCustomModules"
+                                       (onEditorCreated)="addBindingCreated($event)"
   ></quill-editor>
 
   <div class='post-edit-actions-con'>

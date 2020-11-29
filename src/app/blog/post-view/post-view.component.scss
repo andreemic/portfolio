@@ -1,7 +1,12 @@
 .a-con {
-  max-width: 800px;
+  max-width: 1000px;
   width: 80%;
   margin: auto;
+  &.mobile {
+    width: 100%;
+    padding: 0px 10px;
+    box-sizing: border-box;
+  }
 }
 mat-spinner {
   position: fixed;

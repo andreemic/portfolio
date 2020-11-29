@@ -65,7 +65,6 @@ export class AuthService {
   }
 
   public isLoggedIn() {
-    console.log(moment(), this.getExpiration());
     return moment().isBefore(this.getExpiration());
   }
 
