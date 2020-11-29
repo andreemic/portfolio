@@ -1,6 +1,6 @@
 <mat-spinner *ngIf="!post; else content"></mat-spinner>
 <ng-template #content>
-  <div class='a-con'>
+  <div class='a-con' ngClass.xs="mobile">
     <h1>{{ post.title }}</h1>
 
     <img class="post-header" *ngIf="post.thumbnailPath" [src]="post.thumbnailPath.big" />
