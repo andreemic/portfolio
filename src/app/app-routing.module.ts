@@ -12,7 +12,7 @@ const routes: Routes = [
   { path: 'projects', component: ProjectsComponent },
   { path: 'contact', component: ContactComponent },
   { path: 'impressum', component: ImpressumComponent },
-  { path: 'blog', loadChildren: () => import('./blog/blog.module').then(m => m.BlogModule) },
+  // { path: 'blog', loadChildren: () => import('./blog/blog.module').then(m => m.BlogModule) },
   {
     path: 'admin',
     children: [

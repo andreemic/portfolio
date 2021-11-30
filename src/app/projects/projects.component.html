@@ -16,8 +16,8 @@
       <p *ngIf="project.description">{{ project.description }}</p>
       <p ngClass="made-with">Gemacht mit: {{ project.technologies.join(', ') }}</p>
     </mat-card-content>
-    <mat-card-actions fxFlexAlign="flex-end">
+    <!-- <mat-card-actions fxFlexAlign="flex-end">
       <a *ngIf="project.demo_url" mat-button target="_blank" [href]="project.demo_url">Demo</a>
-    </mat-card-actions>
+    </mat-card-actions> -->
   </mat-card>
 </div>

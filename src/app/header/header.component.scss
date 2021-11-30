@@ -59,6 +59,10 @@
     justify-self: flex-start;
     align-self: center;
     margin: 0px 20px;
+
+    .hamburger-inner, .hamburger-inner::before, .hamburger-inner::after {
+      background-color: white;
+    }
   }
 
   ul {
